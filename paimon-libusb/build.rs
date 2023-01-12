@@ -21,6 +21,7 @@ pub fn link_framework(name: &str) {
 
 #[cfg(target_env = "msvc")]
 fn find_libusb_pkg(_statik: bool) -> bool {
+    println!("!!!!!!!");
     match vcpkg::Config::new().find_package("libusb") {
         Ok(_) => true,
         Err(e) => {
